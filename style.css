@@ -8,12 +8,12 @@
 }
 
 :root {
-  --color-bg: #F7F4F0;
-  --color-bg-alt: #EFEBE5;
-  --color-text: #2C2C2C;
-  --color-text-light: #6B6B6B;
-  --color-accent: #9B8B7A;
-  --color-accent-dark: #7A6B5A;
+  --color-bg: #EEF3EE;
+  --color-bg-alt: #C5D5CE;
+  --color-text: #1A3E3E;
+  --color-text-light: #4E8A96;
+  --color-accent: #6DA7B0;
+  --color-accent-dark: #3D7A7A;
   --color-white: #FFFFFF;
   --font-en: 'Cormorant Garamond', serif;
   --font-jp: 'Noto Sans JP', sans-serif;
@@ -47,11 +47,11 @@ em {
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: rgba(247, 244, 240, 0.95);
+  background-color: rgba(238, 243, 238, 0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(155, 139, 122, 0.15);
+  border-bottom: 1px solid rgba(109, 167, 176, 0.2);
   transition: box-shadow var(--transition);
 }
 
@@ -122,7 +122,7 @@ em {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #D6CFC7 0%, #B8AFA7 50%, #9B8B7A 100%);
+  background: linear-gradient(135deg, #A5C3BF 0%, #6DA7B0 50%, #2A5E5E 100%);
   overflow: hidden;
 }
 
@@ -249,7 +249,7 @@ em {
 
 .menu-card {
   background: var(--color-white);
-  border: 1px solid rgba(155, 139, 122, 0.2);
+  border: 1px solid rgba(109, 167, 176, 0.25);
   padding: 32px 28px;
   transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -340,8 +340,8 @@ em {
 .map-placeholder {
   width: 100%;
   height: 280px;
-  background: rgba(155, 139, 122, 0.1);
-  border: 1px solid rgba(155, 139, 122, 0.2);
+  background: rgba(109, 167, 176, 0.1);
+  border: 1px solid rgba(109, 167, 176, 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -362,7 +362,7 @@ em {
    フッター
 ===================== */
 #footer {
-  background-color: var(--color-text);
+  background-color: #2A5E5E;
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
   padding: 48px 20px;
