@@ -30,11 +30,23 @@
 
   <!-- ヒーローセクション -->
   <section id="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content fade-item">
-      <p class="hero-sub">新潟県三条市のマッサージ・トレーニングサロン</p>
-      <h1 class="hero-title">Body-Make Push</h1>
-      <p class="hero-catch">あなたの身体と向き合う、特別な時間を。</p>
+    <div class="hero-media">
+      <div class="hero-slideshow">
+        <div class="hero-slide active"><img src="images/top1.png" alt="" /></div>
+        <div class="hero-slide"><img src="images/top2.png" alt="" /></div>
+        <div class="hero-slide"><img src="images/top3.png" alt="" /></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content fade-item">
+        <p class="hero-sub">新潟県三条市のマッサージ・トレーニングサロン</p>
+        <h1 class="hero-title">Body-Make Push</h1>
+        <p class="hero-sub">ボディメイク　プッシュ</p>
+      </div>
+      <div class="hero-dots">
+        <button class="hero-dot active" data-index="0"></button>
+        <button class="hero-dot" data-index="1"></button>
+        <button class="hero-dot" data-index="2"></button>
+      </div>
     </div>
     <div class="scroll-indicator">
       <span></span>
@@ -45,14 +57,16 @@
   <section id="concept" class="section">
     <div class="section-inner fade-item">
       <p class="section-label">Concept</p>
-      <h2 class="section-title">身体づくりの、根本から。</h2>
+      <h2 class="section-title">やる気はいらない。<br />ゆるく続けることが、いちばんの近道。</h2>
       <div class="divider"></div>
       <p class="section-text">
-        Body-Make Push は、マッサージとトレーニングを組み合わせた個人サロンです。<br />
-        疲れた筋肉をほぐし、正しい動作を身につけることで、<br />
-        日常の質を根本から変えることを目指しています。<br /><br />
-        お客様一人ひとりの体質・目的に合わせた施術とプログラムで、<br />
-        無理なく、長く続けられる身体づくりをサポートします。
+        Body-Make Push は、リラクゼーション・ボディメンテナンス・パーソナルトレーニングを<br />
+        ひとつにまとめた、完全マンツーマンの個人サロンです。<br /><br />
+        肩こりや腰痛のない身体、ストレスから解放される時間。<br />
+        そのためには、身体をほぐすだけでなく、正しい動き方を日常に取り入れることが大切です。<br /><br />
+        頑張らなくていい、無理しなくていい。<br />
+        あなたの身体・目的・ライフスタイルに合わせたメニューで、<br />
+        楽しみながら続けられる身体づくりをサポートします。
       </p>
     </div>
   </section>
@@ -63,27 +77,39 @@
       <p class="section-label">Menu</p>
       <h2 class="section-title">メニュー・料金</h2>
       <div class="divider"></div>
-      <div class="menu-grid">
-        <div class="menu-card">
-          <p class="menu-name">全身マッサージ</p>
-          <p class="menu-desc">全身の筋肉をほぐし、血流を促進。日々の疲れをリセットします。</p>
-          <p class="menu-price">60分 ¥6,000</p>
+      <p class="section-text menu-intro">
+        お好みの時間を選んでいただき、<br />
+        ご要望に応じてボディケアとトレーニングをご提供します。
+      </p>
+      <div class="course-grid">
+        <div class="course-card">
+          <p class="course-time">30<span>分</span></p>
+          <p class="course-price">¥4,000</p>
         </div>
-        <div class="menu-card">
-          <p class="menu-name">部分集中ケア</p>
-          <p class="menu-desc">肩・腰・脚など気になる部位を重点的にケアします。</p>
-          <p class="menu-price">30分 ¥3,500</p>
+        <div class="course-card">
+          <p class="course-time">60<span>分</span></p>
+          <p class="course-price">¥6,000</p>
         </div>
-        <div class="menu-card">
-          <p class="menu-name">パーソナルトレーニング</p>
-          <p class="menu-desc">目標に合わせたオーダーメイドのトレーニングプログラムを提供。</p>
-          <p class="menu-price">60分 ¥8,000</p>
+        <div class="course-card">
+          <p class="course-time">90<span>分</span></p>
+          <p class="course-price">¥9,500</p>
         </div>
-        <div class="menu-card">
-          <p class="menu-name">マッサージ＋トレーニング</p>
-          <p class="menu-desc">ケアとトレーニングをセットで受けられるお得なコース。</p>
-          <p class="menu-price">90分 ¥12,000</p>
+        <div class="course-card">
+          <p class="course-time">120<span>分</span></p>
+          <p class="course-price">¥13,900</p>
         </div>
+      </div>
+      <div class="treatments">
+        <p class="treatments-label">施術内容</p>
+        <ul class="treatments-list">
+          <li>全身もみほぐし</li>
+          <li>骨盤矯正</li>
+          <li>小顔矯正（コルギ）</li>
+          <li>ドライヘッドスパ</li>
+          <li>痩せ筋トレ</li>
+          <li>部分トレーニング</li>
+          <li class="treatments-etc">etc...</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -129,8 +155,13 @@
   <!-- フッター -->
   <footer id="footer">
     <p class="footer-logo">Body-Make Push</p>
-    <p class="footer-copy">&copy; 2024 Body-Make Push. All rights reserved.</p>
   </footer>
+
+  <!-- 予約フローティングボタン -->
+  <a href="https://lin.ee/9mfUqTk" target="_blank" rel="noopener noreferrer" class="float-reserve">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.65 1.37 5.02 3.52 6.64L4.5 21l4.26-1.97C9.8 19.64 10.88 20 12 20c5.52 0 10-3.92 10-8.76S17.52 2 12 2z"/></svg>
+    <span>予約はこちら</span>
+  </a>
 
   <script src="script.js"></script>
 </body>

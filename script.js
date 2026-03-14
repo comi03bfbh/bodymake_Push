@@ -1,4 +1,33 @@
 // =====================
+// ヒーロースライドショー
+// =====================
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.hero-dot');
+let currentSlide = 0;
+
+function goToSlide(index) {
+  slides[currentSlide].classList.remove('active');
+  dots[currentSlide].classList.remove('active');
+  currentSlide = index;
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
+}
+
+let slideshowTimer = setInterval(() => {
+  goToSlide((currentSlide + 1) % slides.length);
+}, 5000);
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    clearInterval(slideshowTimer);
+    goToSlide(i);
+    slideshowTimer = setInterval(() => {
+      goToSlide((currentSlide + 1) % slides.length);
+    }, 5000);
+  });
+});
+
+// =====================
 // ヘッダー：スクロール時にシャドウ付与
 // =====================
 const header = document.getElementById('header');
