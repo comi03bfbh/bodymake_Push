@@ -1,4 +1,15 @@
 /* =====================
+   HEX透過度早見表 (#RRGGBBAA)
+   10% → 1A
+   20% → 33
+   30% → 4D
+   50% → 80
+   70% → B3
+   90% → E6
+   95% → F2
+===================== */
+
+/* =====================
    リセット・ベース
 ===================== */
 *, *::before, *::after {
@@ -47,11 +58,10 @@ em {
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: rgba(238, 243, 238, 0.95);
+  background-color: #E6EEE04D;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(109, 167, 176, 0.2);
   transition: box-shadow var(--transition);
 }
 
@@ -122,7 +132,7 @@ em {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-bg);
+  background: #E6EEE0;
   overflow: hidden;
 }
 
@@ -159,14 +169,7 @@ em {
 }
 
 .hero-dots {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: none;
 }
 
 .hero-dot {
@@ -470,15 +473,18 @@ em {
   right: 28px;
   z-index: 999;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 4px;
+  width: 90px;
+  height: 90px;
   background: #1a3e39;
   color: #fff;
   text-decoration: none;
-  padding: 14px 22px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
+  border-radius: 50%;
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
   box-shadow: 0 4px 20px rgba(26, 62, 57, 0.4);
   transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -492,12 +498,12 @@ em {
    フッター
 ===================== */
 #footer {
-  background-color: #2A5E5E;
+  background-color: #1a3e39;
   color: rgba(255, 255, 255, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
+  height: 130px;
 }
 
 .footer-logo {
@@ -506,12 +512,6 @@ em {
   font-weight: 600;
   color: var(--color-white);
   letter-spacing: 0.08em;
-  margin-bottom: 16px;
-}
-
-.footer-copy {
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
 }
 
 /* =====================
@@ -541,12 +541,17 @@ em {
     padding: 0 20px;
   }
 
+  .logo-img {
+    height: 40px;
+  }
+
   .nav-list {
-    gap: 20px;
+    gap: 16px;
   }
 
   .nav-list a {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
+    white-space: nowrap;
   }
 
   .section {
@@ -564,5 +569,29 @@ em {
 
   .map-placeholder {
     height: 220px;
+  }
+
+  #hero {
+    height: auto;
+    min-height: unset;
+    padding: 80px 0 40px;
+  }
+
+  .hero-media {
+    width: calc(100vw - 48px);
+    height: unset;
+    margin-top: 0;
+  }
+
+  .hero-title {
+    font-size: 7.5vw;
+    white-space: nowrap;
+  }
+
+  .hero-sub,
+  .hero-catch {
+    font-size: 2.8vw;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
   }
 }

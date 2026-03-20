@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api:*)",
+      "Bash(nslookup www.bodymakepush.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.bodymakepush.com)",
+      "WebFetch(domain:comi03bfbh.github.io)",
+      "WebFetch(domain:www.githubstatus.com)",
+      "Bash(nslookup -type=CNAME www.bodymakepush.com)",
+      "Bash(nslookup -type=A bodymakepush.com)"
+    ]
+  }
+}
