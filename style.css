@@ -19,7 +19,7 @@
 }
 
 :root {
-  --color-bg: #C5D5CE;
+  --color-bg: #E6EEE0;
   --color-bg-alt: #F1E6D3;
   --color-text: #1a3e39;
   --color-text-light: #2d6060;
@@ -207,7 +207,7 @@ em {
 }
 
 .hero-sub {
-  font-size: 1rem;
+  font-size: 1.2rem;
   letter-spacing: 0.2em;
   margin-bottom: 20px;
   opacity: 0.95;
@@ -503,12 +503,12 @@ em {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 130px;
+  height: 60px;
 }
 
 .footer-logo {
   font-family: var(--font-en);
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-white);
   letter-spacing: 0.08em;
@@ -537,6 +537,10 @@ em {
    レスポンシブ
 ===================== */
 @media (max-width: 768px) {
+  .section-title {
+    font-size: 1.1rem;
+  }
+
   .header-inner {
     padding: 0 20px;
   }
@@ -584,13 +588,13 @@ em {
   }
 
   .hero-title {
-    font-size: 7.5vw;
+    font-size: 9vw;
     white-space: nowrap;
   }
 
   .hero-sub,
   .hero-catch {
-    font-size: 2.8vw;
+    font-size: 3.4vw;
     letter-spacing: 0.1em;
     white-space: nowrap;
   }

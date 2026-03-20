@@ -51,10 +51,7 @@ const observer = new IntersectionObserver(
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
         entry.target.classList.remove('hidden');
-      } else {
-        // スクロールで通り過ぎたらフェードアウト
-        entry.target.classList.remove('visible');
-        entry.target.classList.add('hidden');
+        observer.unobserve(entry.target);
       }
     });
   },
