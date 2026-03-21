@@ -625,7 +625,7 @@ em {
 
 .course-unit {
   font-family: var(--font-jp);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 400;
   margin-left: 2px;
 }
@@ -639,7 +639,7 @@ em {
 }
 
 .course-note {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-text-light);
   letter-spacing: 0.04em;
   margin-top: 8px;
@@ -862,12 +862,19 @@ em {
   height: 60px;
 }
 
-.footer-copy {
+.footer-logo {
   font-family: var(--font-en);
   font-size: 1rem;
   font-weight: 600;
   color: #1a3e39;
   letter-spacing: 0.08em;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: #1a3e3980;
+  letter-spacing: 0.05em;
+  margin-top: 6px;
 }
 
 /* =====================
