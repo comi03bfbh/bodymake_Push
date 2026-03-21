@@ -70,6 +70,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', (e) => {
     e.preventDefault();
     const targetId = anchor.getAttribute('href');
+    if (targetId === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     const target = document.querySelector(targetId);
     if (!target) return;
 

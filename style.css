@@ -676,25 +676,18 @@ em {
 }
 
 .sejutsu-block {
-  display: flex;
-  align-items: center;
-  gap: 48px;
+  position: relative;
   max-width: 860px;
   margin: 80px auto 0;
   padding: 0 20px;
-}
-
-.sejutsu-images {
-  position: relative;
-  flex: 0 0 480px;
-  height: 480px;
+  height: 720px;
 }
 
 .sejutsu-img1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 68%;
+  width: 52%;
   height: auto;
   z-index: 2;
   display: block;
@@ -707,11 +700,22 @@ em {
   -webkit-mask-composite: source-in;
 }
 
+.sejutsu-text {
+  position: absolute;
+  top: 100px;
+  left: 60%;
+  width: 50%;
+  font-size: 1rem;
+  line-height: 2.2;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+}
+
 .sejutsu-img2 {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 54%;
+  width: 48%;
   height: auto;
   z-index: 1;
   display: block;
@@ -722,14 +726,6 @@ em {
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent),
                       linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
   -webkit-mask-composite: source-in;
-}
-
-.sejutsu-text {
-  flex: 1;
-  font-size: 1rem;
-  line-height: 2.2;
-  letter-spacing: 0.05em;
-  color: var(--color-text);
 }
 
 /* =====================
@@ -944,29 +940,33 @@ em {
   }
 
   .sejutsu-block {
-    flex-direction: column;
-    gap: 32px;
-    margin-top: 48px;
-  }
-
-  .sejutsu-block {
     padding: 0;
-  }
-
-  .sejutsu-images {
-    flex: 0 0 auto;
-    width: 100%;
-    height: 400px;
+    height: auto;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
 
   .sejutsu-img1 {
-    width: 65%;
+    position: static;
+    width: 80%;
   }
 
   .sejutsu-img2 {
-    width: 52%;
-    bottom: 0;
-    right: 0;
+    position: static;
+    width: 80%;
+  }
+
+  .sejutsu-text {
+    position: static;
+    width: 100%;
+    top: auto;
+    left: auto;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0 20px;
   }
 
   .concept-staff {
