@@ -8,7 +8,8 @@
       "WebFetch(domain:comi03bfbh.github.io)",
       "WebFetch(domain:www.githubstatus.com)",
       "Bash(nslookup -type=CNAME www.bodymakepush.com)",
-      "Bash(nslookup -type=A bodymakepush.com)"
+      "Bash(nslookup -type=A bodymakepush.com)",
+      "Bash(sort -k5 -rh)"
     ]
   }
 }
