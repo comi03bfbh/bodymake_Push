@@ -32,7 +32,9 @@
   --transition: 0.3s ease;
 }
 
-html {
+html,
+body {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
