@@ -926,11 +926,21 @@ em {
     flex-direction: column;
     padding: 0;
     margin-bottom: 48px;
+    margin-left: -20px;
+    margin-right: -20px;
   }
 
   .concept-block-img {
     flex: 0 0 auto;
-    width: 100%;
+    width: 88%;
+  }
+
+  .concept-block:not(.concept-block--reverse) .concept-block-img {
+    align-self: flex-start;
+  }
+
+  .concept-block--reverse .concept-block-img {
+    align-self: flex-end;
   }
 
   .concept-block-text {
