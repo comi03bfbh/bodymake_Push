@@ -18,6 +18,13 @@
   padding: 0;
 }
 
+.br-mobile { display: none; }
+
+@media (max-width: 768px) {
+  .br-desktop { display: none; }
+  .br-mobile { display: inline; }
+}
+
 :root {
   --color-bg: #E6EEE0;
   --color-bg-alt: #C8D8D0;
@@ -439,7 +446,7 @@ em {
   background: #ffffff80;
   box-shadow: 0 4px 28px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  padding: 36px 48px;
+  padding: 24px 32px;
   font-size: 1.1rem;
   line-height: 2.2;
   letter-spacing: 0.05em;
@@ -618,7 +625,7 @@ em {
 
 .course-unit {
   font-family: var(--font-jp);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 400;
   margin-left: 2px;
 }
@@ -632,7 +639,7 @@ em {
 }
 
 .course-note {
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
   letter-spacing: 0.04em;
   margin-top: 8px;
@@ -855,7 +862,7 @@ em {
   height: 60px;
 }
 
-.footer-logo {
+.footer-copy {
   font-family: var(--font-en);
   font-size: 1rem;
   font-weight: 600;
@@ -937,7 +944,7 @@ em {
   }
 
   .concern-message {
-    padding: 28px 20px;
+    padding: 20px 10px;
     margin: 0 -20px;
   }
 
@@ -974,7 +981,12 @@ em {
   .concept-staff {
     flex-direction: column;
     gap: 32px;
-    padding: 40px 20px 0;
+    padding: 40px 8px 0;
+  }
+
+  .staff-message-box {
+    width: 100%;
+    padding: 28px 20px;
   }
 
   .staff-profile {
@@ -991,6 +1003,8 @@ em {
 
   .concept-staff-text {
     text-align: center;
+    width: 100%;
+    padding: 0;
   }
 
   .staff-career {
