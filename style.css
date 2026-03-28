@@ -23,6 +23,7 @@
 @media (max-width: 768px) {
   .br-desktop { display: none; }
   .br-mobile { display: inline; }
+  .dot-desktop { display: none; }
 }
 
 :root {
@@ -43,6 +44,10 @@ html,
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+html {
+  background-color: var(--color-bg-alt);
 }
 
 body {
@@ -298,7 +303,7 @@ em {
 }
 
 .section-inner {
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
   text-align: center;
 }
@@ -336,15 +341,24 @@ em {
 
 .concept-intro {
   max-width: 900px;
-  margin: 0 auto 64px;
+  margin: 0 auto 40px;
   text-align: center;
+  line-height: 1.8;
 }
+
+.concept-keyword {
+  font-family: var(--font-jp);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
 
 .concept-block {
   display: flex;
   align-items: center;
   max-width: 1200px;
-  margin: 0 auto 80px;
+  margin: 0 auto 48px;
   padding: 0 16px;
 }
 
@@ -372,8 +386,8 @@ em {
   padding: 36px 40px;
   box-shadow: 0 4px 28px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  font-size: 1.05rem;
-  line-height: 2.2;
+  font-size: 0.95rem;
+  line-height: 1.8;
   letter-spacing: 0.05em;
   color: var(--color-text);
   text-align: left;
@@ -384,9 +398,15 @@ em {
   margin-right: -12%;
 }
 
+.concept-block-text--right {
+  text-align: right;
+}
+
 .concept-lead {
   display: block;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 1.2rem;
+  font-weight: 500;
   margin-bottom: 0.5em;
   letter-spacing: 0.06em;
   color: var(--color-text);
@@ -414,18 +434,18 @@ em {
 
 .concern-list {
   list-style: none;
-  padding: 0;
+  padding: 0 20px;
   margin: 0 auto 48px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
   gap: 12px 32px;
   text-align: left;
-  max-width: 640px;
+  max-width: 900px;
 }
 
 .concern-list li {
   position: relative;
-  padding-left: 18px;
+  padding-left: 10.3px;
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--color-text);
@@ -433,13 +453,16 @@ em {
 }
 
 .concern-list li::before {
-  content: '';
+  content: '◆';
   position: absolute;
   left: 0;
-  top: 0.7em;
-  width: 8px;
-  height: 1px;
-  background: var(--color-accent);
+  top: 0;
+  width: auto;
+  height: auto;
+  background: none;
+  font-size: 0.5em;
+  color: var(--color-accent);
+  line-height: 3.8;
 }
 
 .concern-message {
@@ -447,8 +470,8 @@ em {
   box-shadow: 0 4px 28px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   padding: 24px 32px;
-  font-size: 1.1rem;
-  line-height: 2.2;
+  font-size: 1.0rem;
+  line-height: 1.8;
   letter-spacing: 0.05em;
   color: var(--color-text);
 }
@@ -573,6 +596,10 @@ em {
   margin-bottom: 16px;
 }
 
+.staff-message--mobile {
+  display: none;
+}
+
 .staff-bio {
   padding-left: 0px;
   margin-top: 20px;
@@ -654,7 +681,7 @@ em {
 
 .treatments-label {
   font-family: var(--font-jp);
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   letter-spacing: 0.25em;
   color: var(--color-accent-dark);
   margin-bottom: 24px;
@@ -672,7 +699,7 @@ em {
   font-size: 1rem;
   letter-spacing: 0.08em;
   color: var(--color-text);
-  background: #ffffff4D;
+  background: #ffffffB3;
   border: 1px solid rgba(109, 167, 176, 0.5);
   padding: 8px 20px;
 }
@@ -899,9 +926,19 @@ em {
   transform: translateX(0);
 }
 
+.fade-item.fade-in-place {
+  transform: none;
+}
+
 .fade-item.fade-delayed {
   transition-delay: 0.5s;
 }
+
+.fade-item.fade-delayed-1 { transition-delay: 0.15s; }
+.fade-item.fade-delayed-2 { transition-delay: 0.3s; }
+.fade-item.fade-delayed-3 { transition-delay: 0.45s; }
+.fade-item.fade-delayed-4 { transition-delay: 0.6s; }
+.fade-item.fade-delayed-5 { transition-delay: 0.75s; }
 
 .fade-item.visible {
   opacity: 1;
@@ -958,6 +995,11 @@ em {
 
   .concern-list {
     grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .concern-list li {
+    font-size: 0.9rem;
   }
 
   .concern-message {
@@ -1004,6 +1046,16 @@ em {
   .staff-message-box {
     width: 100%;
     padding: 28px 20px;
+  }
+
+  .staff-message--desktop {
+    display: none;
+  }
+
+  .staff-message--mobile {
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.7;
   }
 
   .staff-profile {
